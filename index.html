@@ -19,6 +19,9 @@
         .mySlides2 {
             display: none;
         }
+        .mySlides3 {
+            display: none;
+        }
 	</style>
 </head>
 	<body class="is-preload">
@@ -75,12 +78,8 @@
 				<!-- Work -->
 				<article id="work">
 					<h2 class="major">Work</h2>
-					<h2 class="major">Qualifications</h2>
-					<div class="w3-content w3-display-container">
-						<img src="images/Evan Thiede Resume Sockeye.pdf" style="width:100%">
-					
-					</div>
-					<h2 class="major">Echoes of Gold</h2>
+				
+					<h3 class="major">Echoes of Gold</h3>
 					<p>
 						Echoes of Gold is the culmination of my development as a level designer.
 						You explore an unknown environment that you are dropped into suddenly.
@@ -102,7 +101,7 @@
 						but also mildy uneasy. The lack of understanding and the sheer solitary nature of environment
 						creates the feeling that you are somewhere that you are not supposed to be.
 					</p>
-					<h2 class="major">World Building</h2>
+					<h3 class="major">World Building</h3>
 
 					<p>
 						There were a few environments that were created with the intention of being a part of
@@ -122,20 +121,22 @@
 						<button class="w3-button w3-black w3-display-right" onclick="plusDivs2(1)">&#10095;</button>
 					</div>
 					<br />
-					<h2 class="major">Finger Gun</h2>
+					<h3 class="major">Photography</h3>
 					<p>
-						Finger Gun was my first real step into Unreal Engine 5. This was a game that I created with
-						a team to take a funny spin on a showdown style shootoff. The players would shoot explosive spheres
-						out of a finger gun, the rest is fairly standard.
+						Digital photography has been a ongoing passion of mine for the last 5 years. While it is the 
+						hobby that I get to engage with the least, I will always take the opportunity to bring my camera with me 
+						on trips. My specialization is in nature and landscape photography, but I have been looking to branch out into the other disciplines.
 					</p>
-					<span class="image main"><img src="images/FingerGunArena.png" alt="" /></span>
-					<p>
-						Alongside these projects, I am part of a small studio called Torchfire.
-						My primary role is the level design lead, at this stage I'm basically building
-						out levels and mapping out puzzle flows for the time when we get to implimentation.
-					</p>
+					<div class="w3-content w3-display-container">
+						<img class="mySlides3" src="images/Landscape_1.jpg" style="width:100%">
+						<img class="mySlides3" src="images/Landscape_2.jpg" style="width:100%">
+						<img class="mySlides3" src="images/Landscape_3.jpg" style="width:100%">
+
+						<button class="w3-button w3-black w3-display-left" onclick="plusDivs3(-1)">&#10094;</button>
+						<button class="w3-button w3-black w3-display-right" onclick="plusDivs3(1)">&#10095;</button>
+					</div>					
 					<br />
-					<h2 class="major">Animations</h2>
+					<h3 class="major">Animations</h3>
 					<p>
 						Of all the skills that I have, Blender is the one that I am most interested in learning more about.
 						I've fiddled around with a lot of files and done some basic renders, but I know that I'm only scratching the
@@ -145,8 +146,8 @@
 						<img class="myVideo" src="images/IdleTimeout.gif" style="width:100%">
 						<img class="myVideo" src="images/CreatureWalk.gif" style="width:100%">
 
-						<button class="w3-button w3-black w3-display-left" onclick="plusDivs3(-1)">&#10094;</button>
-						<button class="w3-button w3-black w3-display-right" onclick="plusDivs3(1)">&#10095;</button>
+						<button class="w3-button w3-black w3-display-left" onclick="plusDivs4(-1)">&#10094;</button>
+						<button class="w3-button w3-black w3-display-right" onclick="plusDivs4(1)">&#10095;</button>
 					</div>
 	
 
@@ -485,6 +486,7 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
                 }
                 x[slideIndex2 - 1].style.display = "block";
 			}
+
             var slideIndex3 = 1;
             showDivs3(slideIndex3);
 
@@ -494,13 +496,30 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
             function showDivs3(n) {
                 var i;
-                var x = document.getElementsByClassName("myVideo");
+                var x = document.getElementsByClassName("mySlides3");
                 if (n > x.length) { slideIndex3 = 1 }
                 if (n < 1) { slideIndex3 = x.length }
                 for (i = 0; i < x.length; i++) {
                     x[i].style.display = "none";
                 }
                 x[slideIndex3 - 1].style.display = "block";
+			}
+            var slideIndex4 = 1;
+            showDivs4(slideIndex4);
+
+            function plusDivs4(n) {
+                showDivs4(slideIndex4 += n);
+            }
+
+            function showDivs4(n) {
+                var i;
+                var x = document.getElementsByClassName("myVideo");
+                if (n > x.length) { slideIndex4 = 1 }
+                if (n < 1) { slideIndex2 = x.length }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex4 - 1].style.display = "block";
             }
 		</script>
 		<script src="assets/js/jquery.min.js"></script>
