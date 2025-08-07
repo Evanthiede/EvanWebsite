@@ -78,7 +78,7 @@
 				<!-- Work -->
 				<article id="work">
 					<h2 class="major">Work</h2>
-				
+
 					<h3 class="major">Echoes of Gold</h3>
 					<p>
 						Echoes of Gold is the culmination of my development as a level designer.
@@ -111,7 +111,7 @@
 					<div class="w3-content w3-display-container">
 						<img class="mySlides2" src="images/CoffeeShop.png" style="width:100%">
 						<img class="mySlides2" src="images/FloodedSubway.png" style="width:100%">
-                        <img class="mySlides2" src="images/SandyCavern.png" style="width:100%">
+						<img class="mySlides2" src="images/SandyCavern.png" style="width:100%">
 						<img class="mySlides2" src="images/Titanic Plains Render.png" style="width:100%">
 						<img class="mySlides2" src="images/CloudIsland.png" style="width:100%">
 						<img class="mySlides2" src="images/GodRays.png" style="width:100%">
@@ -122,8 +122,13 @@
 					</div>
 					<br />
 					<h3 class="major">Photography</h3>
-					
-					
+					<p>
+						Photography is a hobby that I want to delve deeper into. 
+						Nature scenes are what I specialize in, most of my experience 
+						revolving around landscapes and wildlife. These are the examples of 
+						my recent photographs.
+					</p>
+
 					<div class="w3-content w3-display-container">
 						<img class="mySlides3" src="images/Landscape_1.png" style="width:100%">
 						<img class="mySlides3" src="images/Bear_1.png" style="width:100%">
@@ -132,25 +137,44 @@
 
 						<button class="w3-button w3-black w3-display-left" onclick="plusDivs3(-1)">&#10094;</button>
 						<button class="w3-button w3-black w3-display-right" onclick="plusDivs3(1)">&#10095;</button>
-					</div>					
+					</div>
+					<br />
+					<h3 class="major">Graphic Designs</h3>
+					<p>
+						These are the examples of the graphic designs I have worked on professionally.
+						I designed these two bottle labels for Sockeye Brewing in collaboration 
+						with the marketing team.
+					</p>
+
+					<div class="w3-content w3-display-container">
+						<img class="mySlides4" src="images/AOL.png" style="width:100%">
+						<img class="mySlides4" src="images/8_Mins.png" style="width:100%">
+			
+						<button class="w3-button w3-black w3-display-left" onclick="plusDivs4(-1)">&#10094;</button>
+						<button class="w3-button w3-black w3-display-right" onclick="plusDivs4(1)">&#10095;</button>
+					</div>
 					<br />
 					<h3 class="major">Animations</h3>
-					
+					<p>
+						Of all the skills that I have, Blender is the one that I am most interested in learning more about.
+						I've fiddled around with animations and some basic renders, but I know that I'm only scratching the
+						surface of what I could be making.
+					</p>
 					<div class="w3-content w3-display-container">
 						<img class="myVideo" src="images/IdleTimeout.gif" style="width:100%">
 						<img class="myVideo" src="images/CreatureWalk.gif" style="width:100%">
 
-						<button class="w3-button w3-black w3-display-left" onclick="plusDivs4(-1)">&#10094;</button>
-						<button class="w3-button w3-black w3-display-right" onclick="plusDivs4(1)">&#10095;</button>
+						<button class="w3-button w3-black w3-display-left" onclick="plusDivs5(-1)">&#10094;</button>
+						<button class="w3-button w3-black w3-display-right" onclick="plusDivs5(1)">&#10095;</button>
 					</div>
-	
+
 
 				</article>
 
 				<!-- About -->
 				<article id="about">
 					<h2 class="major">About Me</h2>
-					<!--<span class="image main"><img src="images/Outdoorsy.jpg" alt="" /></span>-->
+					<span class="image main"><img src="images/Outdoorsy.jpg" alt="" /></span>
 					<p>
 						My main skill set is falls into 3D rendering and game engines. My degree took me through 4 years of working in
 						programs like Unity and Unreal Engine, with supplimentaries like Blender and Autodesk Maya. I used these skills throughout the
@@ -165,9 +189,7 @@
 						Unity and Unreal Engine in my degree was focused on being a level designer and artist. This specialization has carried
 						over into projects past my degree. I have worked as a level designer and concept modeler for an indie studio Torchfire for the last 3 years.
 						<br />
-						Of all the skills that I have, Blender is the one that I am most interested in learning more about.
-						I've fiddled around with a lot of files and done some basic renders, but I know that I'm only scratching the
-						surface of what I could be making.
+						
 
 					</p>
 				</article>
@@ -516,13 +538,30 @@ print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
 
             function showDivs4(n) {
                 var i;
-                var x = document.getElementsByClassName("myVideo");
+                var x = document.getElementsByClassName("mySlides4");
                 if (n > x.length) { slideIndex4 = 1 }
-                if (n < 1) { slideIndex2 = x.length }
+                if (n < 1) { slideIndex4 = x.length }
                 for (i = 0; i < x.length; i++) {
                     x[i].style.display = "none";
                 }
                 x[slideIndex4 - 1].style.display = "block";
+            }
+            var slideIndex5 = 1;
+            showDivs5(slideIndex5);
+
+            function plusDivs5(n) {
+                showDivs5(slideIndex5 += n);
+            }
+
+            function showDivs5(n) {
+                var i;
+                var x = document.getElementsByClassName("myVideo");
+                if (n > x.length) { slideIndex5 = 1 }
+                if (n < 1) { slideIndex5 = x.length }
+                for (i = 0; i < x.length; i++) {
+                    x[i].style.display = "none";
+                }
+                x[slideIndex5 - 1].style.display = "block";
             }
 		</script>
 		<script src="assets/js/jquery.min.js"></script>
